@@ -9,6 +9,6 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
-
+.controller('View1Ctrl', [ '$rootScope', '$scope', '$location', function($rootScope) {
+  $rootScope.hideit = false;
 }]);

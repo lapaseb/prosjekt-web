@@ -1,0 +1,17 @@
+.login-button {
+  background-color: #50c878 !important;
+}
+
+.container {
+  margin-top: 7vh !important;
+}
+
+
+.logoContainer img {
+  width: 5%;
+}
+
+.logoContainer h2 {
+  color: #50c878;
+  font-family: 'Roboto', sans-serif !important;
+}
