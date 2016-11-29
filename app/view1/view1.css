@@ -1,0 +1,20 @@
+.tabs-transparent {
+  visibility: hidden;
+}
+
+.nav-wrapper {
+  height: 7.3vh !important;
+}
+
+.add-project {
+  background-color:  #50c878;
+}
+
+.card-link {
+  color: rgba(0,0,0,0.87);
+}
+
+
+.container-top-bar {
+  width: 100%;
+}
