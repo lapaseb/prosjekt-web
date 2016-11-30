@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="login.css">
 
   </head>
-  <header>
+  <header class="ng-hide" ng-hide="hideit">
     <nav class="top-nav">
         <div class="container-top-bar">
           <div class="nav-wrapper">
@@ -29,26 +29,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="script.js"></script>
 
-    <ul id="slide-out" class="side-nav fixed">
+    <ul id="slide-out" class="side-nav fixed ng-hide" ng-hide="hideit">
         <li><div class="userView">
           <img class="img-sidebar" src="img/logo-sidebar.png">
         </div></li>
-        <li><a href="#/view1"><i class="material-icons">cloud</i>Mes projets</a></li>
-        <li><a href="#/view2"><i class="material-icons">cloud</i>Mon premier projet</a></li>
+        <li><a href="#"><i class="material-icons">person_pin</i>Sébastien Lapaire</a></li>
+        <li><a href="#"><i class="material-icons">email</i>testuser@gmail.com</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-        <li>
-            <a class="collapsible-header waves-effect waves-teal">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-            <div class="collapsible-body">
+        <li><a class="subheader">Gestion de projet</a></li>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header waves-effect"><i class="material-icons">work</i>Mon premier projet</div>
+            <div class="collapsible-body" style="displayé-block">
               <ul>
-                <li><a href="#!">First</a></li>
-                <li><a href="#!">Second</a></li>
-                <li><a href="#!">Third</a></li>
-                <li><a href="#!">Fourth</a></li>
+                <li><a href="#!">Tâches</a></li>
+                <li><a href="#!">Finances</a></li>
+                <li><a href="#!">Ressources</a></li>
               </ul>
             </div>
           </li>
+          <li>
+            <div class="collapsible-header waves-effect"><i class="material-icons">work</i>Mon deuxième projet</div>
+            <div class="collapsible-body" style="displayé-block">
+              <ul>
+                <li><a href="#!"><i class="material-icons">trending_up</i>Tâches</a></li>
+                <li><a href="#!">Finances</a></li>
+                <li><a href="#!">Ressources</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
     </ul>
     <main>
       <div ng-view></div>
