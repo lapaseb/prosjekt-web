@@ -66,6 +66,39 @@
                 </div>
               </div>
 
+              <div class="row">
+                <div class='input-field col s12 m6 l6'>
+                  <label for="datedebut">Date de début</label>
+                  <input type="date" class="datepicker" id="datedebut" ng-model="project.dateDebut">
+                </div>
+                <div class='input-field col s12 m6 l6'>
+                  <label for="datefin">Date de fin (prévision)</label>
+                  <input type="date" class="datepicker" id="datefin" ng-model="project.dateFin">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <label for="test5" >Progression initiale</label>
+                  <p class="range-field">
+                    <input type="range" id="test5" min="0" max="100" ng-model="project.progression"/>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <select class="browser-default" ng-model="project.importance">
+                    <option value="" disabled selected>Sélectionnez une importance</option>
+                    <option value="1">Faible</option>
+                    <option value="2">Moyenne</option>
+                    <option value="3">Elevée</option>
+                  </select>
+                </div>
+              </div>
+
+
+
               <br />
               <center>
                 <div class='row'>

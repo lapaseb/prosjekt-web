@@ -10,65 +10,31 @@
     </div>
 
     <div class="row">
-      <!--
-      <div class="col s12 m4 l4">
-        <a href="#/todo" class="card-link">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Création d'une webapp<i class="material-icons right">more_vert</i></span>
-              <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, ...</p>
-              <br>
-              <span class="card-sub-title grey-text text-darken-4">Progression</span>
-              <div class="progress">
-                <div class="determinate" style="width: 70%"></div>
-              </div>
-              <b>Dépenses</b>
-              <p>CHF 5900.00</p>
-              <br>
-              <b>Gains</b>
-              <p>CHF 11949.40</p>
-            </div>
-          </div>
-        </a>
-    </div>
-    <div class="col s12 m4 l4">
-      <a href="#/todo" class="card-link">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Mise en place d'IPV6<i class="material-icons right">more_vert</i></span>
-            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, ...</p>
-            <br>
-            <span class="card-sub-title grey-text text-darken-4">Progression</span>
-            <div class="progress">
-              <div class="determinate" style="width: 20%"></div>
-            </div>
-            <b>Dépenses</b>
-            <p>CHF 5900.00</p>
-            <br>
-            <b>Gains</b>
-            <p>CHF 11949.40</p>
-          </div>
-        </div>
-      </a>
-  </div>-->
       <div class="list-group" ng-repeat="article in articles">
-          <div class="col s12 m4 l4">
+          <div class="col s12 m6 l4">
             <a href="#/todo" class="card-link" ng-click="singleProject(article.$id)">
-              <div class="card">
+              <div class="card hoverable">
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">{{article.projetNom}}<i class="material-icons right">more_vert</i></span>
+                  <span class="card-title activator grey-text text-darken-4">{{article.projetNom}}</span>
                   <p>{{article.projetDescription}}</p>
                   <br>
                   <span class="card-sub-title grey-text text-darken-4">Progression</span>
                   <div class="progress">
-                    <div class="determinate" style="width: 70%"></div>
+                    <div class="determinate" style="width:0%"></div>
                   </div>
                   <b>Dépenses</b>
                   <p>Aucune dépense.</p>
                   <br>
                   <b>Gains</b>
                   <p>Aucun gain.</p>
-                </div>
+                  <div class="row">
+                      <div class="col s12 l5 m5">
+                         <a class="waves-effect waves-light btn delete-button green darken-1" ng-click="singleProject(article.$id)"><i class="material-icons left">mode_edit</i>Gérer</a>
+                      </div>
+                      <div class="col s12 l7 m7">
+                        <a class="waves-effect waves-light btn delete-button red darken-2" ng-click="deleteProject(article.$id)"><i class="material-icons left">not_interested</i>Supprimer</a>
+                      </div>
+                  </div>
               </div>
             </a>
         </div>

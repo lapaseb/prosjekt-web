@@ -20,7 +20,9 @@ angular.module('myApp.projects', ['ngRoute'])
     } else {
       $rootScope.userEmail = user.email;
       var ref = firebase.database().ref().child(user.uid + "/projets");
-      $scope.articles = $firebaseArray(ref);
+      $rootScope.articles = $firebaseArray(ref);
+
+
       // Fonction permettant de récupérer la valeur d'un projet à partir de son ID
       $rootScope.singleProject = function(id){
         // On créé la référence à la base de donnée en ajoutant l'id
@@ -29,6 +31,13 @@ angular.module('myApp.projects', ['ngRoute'])
         $rootScope.singleProject = $firebaseObject(ref);
 
         $location.path("/todo").replace();
+      }
+
+      $rootScope.deleteProject = function(id){
+        // On créé la référence à la base de donnée en ajoutant l'id
+        var ref = firebase.database().ref().child(user.uid + "/projets/" + id);
+        ref.remove();
+
       }
 
     }

@@ -27,6 +27,12 @@
   <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+      });
+    </script>
     <script src="script.js"></script>
 
     <ul id="slide-out" class="side-nav fixed ng-hide" ng-hide="hideit">
@@ -41,28 +47,18 @@
         <li><a href="#/projects">Mes projets</a></li>
         <li><a href="#">Paramètres de compte</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader"><i class="material-icons">work</i>Gestion de projet</a></li>
+        <li><a class="subheader"><i class="material-icons">work</i>Vos projets</a></li>
         <ul class="collapsible" data-collapsible="accordion">
-          <li>
-            <div class="collapsible-header waves-effect">Création d'une webapp</div>
-            <div class="collapsible-body" style="display-block">
-              <ul>
-                <li><a href="#!">Tâches</a></li>
-                <li><a href="#!">Finances</a></li>
-                <li><a href="#!">Ressources</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header waves-effect">Mise en place d'IPV6</div>
-            <div class="collapsible-body" style="display-block">
-              <ul>
-                <li><a href="#!">Tâches</a></li>
-                <li><a href="#!">Finances</a></li>
-                <li><a href="#!">Ressources</a></li>
-              </ul>
-            </div>
-          </li>
+            <li ng-repeat="article in articles">
+              <div class="collapsible-header waves-effect">{{article.projetNom}}</div>
+              <div class="collapsible-body" style="display-block">
+                <ul>
+                  <li><a  ng-click="singleProject(article.$id)">Tâches</a></li>
+                  <li><a href="#!">Finances</a></li>
+                  <li><a href="#!">Ressources</a></li>
+                </ul>
+              </div>
+            </li>
         </ul>
     </ul>
     <main>

@@ -8,16 +8,13 @@
       display: flex;
       min-height: 100vh;
       flex-direction: column;
+      background: #fafafa;
     }
 
     main {
       flex: 1 0 auto;
       margin-top: 1vw;
       padding-left: 0px;
-    }
-
-    body {
-      background: #fafafa;
     }
 
     label {
@@ -84,6 +81,9 @@
             <center>
               <div class='row'>
                 <button type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button' ng-click="SignIn($event)">Se connecter</button>
+              </div>
+              <div class="row">
+                <img src="img/sign-in-with-google.png" ng-click="signInGoogle()" style="width: 60%;"/>
               </div>
               <a href="#/signup">Créer un compte</a>
               <p>
