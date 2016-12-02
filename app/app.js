@@ -7,7 +7,9 @@ angular.module('myApp', [
   'myApp.todo',
   'myApp.version',
   'myApp.login',
-  'myApp.signup'
+  'myApp.signup',
+  'myApp.addProject',
+  'firebase'
 ]).run([
   '$rootScope', '$location',
   function ($rootScope, $location) {

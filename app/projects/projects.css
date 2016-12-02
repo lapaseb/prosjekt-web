@@ -22,3 +22,7 @@
 .progress {
   height: 15px;
 }
+
+.card {
+  min-height: 400px !important;
+}

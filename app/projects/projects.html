@@ -5,11 +5,12 @@
 
     <div class="fixed-action-btn">
       <a class="btn-floating btn-large add-project">
-        <i class="large material-icons">add</i>
+        <i class="large material-icons" ng-click="addProjectPage()">add</i>
       </a>
     </div>
 
     <div class="row">
+      <!--
       <div class="col s12 m4 l4">
         <a href="#/todo" class="card-link">
           <div class="card">
@@ -49,7 +50,29 @@
           </div>
         </div>
       </a>
-  </div>
+  </div>-->
+      <div class="list-group" ng-repeat="article in articles">
+          <div class="col s12 m4 l4">
+            <a href="#/todo" class="card-link" ng-click="singleProject(article.$id)">
+              <div class="card">
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">{{article.projetNom}}<i class="material-icons right">more_vert</i></span>
+                  <p>{{article.projetDescription}}</p>
+                  <br>
+                  <span class="card-sub-title grey-text text-darken-4">Progression</span>
+                  <div class="progress">
+                    <div class="determinate" style="width: 70%"></div>
+                  </div>
+                  <b>Dépenses</b>
+                  <p>Aucune dépense.</p>
+                  <br>
+                  <b>Gains</b>
+                  <p>Aucun gain.</p>
+                </div>
+              </div>
+            </a>
+        </div>
+      </div>
     </div>
 
   </div>

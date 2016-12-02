@@ -6,10 +6,11 @@ angular.module('myApp.todo', ['ngRoute'])
   $routeProvider.when('/todo', {
     templateUrl: 'todo/todo.html',
     controller: 'TodoCtrl',
-    name : "Création d'une webapp"
+    name : "Tâches à réaliser"
   });
 }])
 
-.controller('TodoCtrl', [function() {
+.controller('TodoCtrl', [ '$rootScope', '$scope', '$location', '$firebaseArray', '$firebase', function($rootScope, $scope, $location, $firebaseArray, $firebase) {
+  $rootScope.hideit = false;
 
 }]);

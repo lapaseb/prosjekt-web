@@ -21,8 +21,7 @@
     }
 
     label {
-
-      left: -5.25rem !important;
+      text-align: left;
     }
 
     h5 {
@@ -67,7 +66,7 @@
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' ng-model="user.email" />
-                <label for='email'>Adresse email</label>
+                <label for='email' data-error="Veuillez indiquer une adresse email valide." data-success="Validé.">Adresse email</label>
               </div>
             </div>
 
