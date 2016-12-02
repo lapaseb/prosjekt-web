@@ -34,7 +34,8 @@
           <img class="img-sidebar" src="img/logo-sidebar.png">
         </div></li>
         <li><a href="#"><i class="material-icons">person_pin</i>Sébastien Lapaire</a></li>
-        <li><a href="#"><i class="material-icons">email</i>testuser@gmail.com</a></li>
+        <li><a href="#"><i class="material-icons">email</i>{{userEmail}}</a></li>
+        <li><a href="#" ng-click="SignOut($event)"><i class="material-icons">label</i>Se déconnecter</a></li>
         <li><div class="divider"></div></li>
         <li><a class="subheader"><i class="material-icons">settings</i>Paramètres</a></li>
         <li><a href="#/projects">Mes projets</a></li>
@@ -74,6 +75,7 @@
     <script src="projects/projects.js"></script>
     <script src="todo/todo.js"></script>
     <script src="login/login.js"></script>
+    <script src="signup/signup.js"></script>
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>

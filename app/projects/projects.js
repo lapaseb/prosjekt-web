@@ -10,6 +10,17 @@ angular.module('myApp.projects', ['ngRoute'])
   });
 }])
 
-.controller('ProjectsCtrl', [ '$rootScope', '$scope', '$location', function($rootScope) {
+.controller('ProjectsCtrl', [ '$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
   $rootScope.hideit = false;
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (!user) {
+      $location.path("#/login");
+      Materialize.toast('Vous devez vous connecter pour accéder à cette page.', 4000);
+    } else {
+      $rootScope.userEmail = user.email;
+    }
+  });
+
+
 }]);
