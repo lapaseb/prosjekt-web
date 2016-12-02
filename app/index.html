@@ -19,7 +19,7 @@
     <nav class="top-nav">
         <div class="container-top-bar">
           <div class="nav-wrapper">
-            <h2 class="page-title">Titre de la page</h2>
+            <h2 class="page-title">{{currentRoute.name}}</h2>
           </div>
         </div>
     </nav>
@@ -36,11 +36,15 @@
         <li><a href="#"><i class="material-icons">person_pin</i>Sébastien Lapaire</a></li>
         <li><a href="#"><i class="material-icons">email</i>testuser@gmail.com</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Gestion de projet</a></li>
+        <li><a class="subheader"><i class="material-icons">settings</i>Paramètres</a></li>
+        <li><a href="#/projects">Mes projets</a></li>
+        <li><a href="#">Paramètres de compte</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader"><i class="material-icons">work</i>Gestion de projet</a></li>
         <ul class="collapsible" data-collapsible="accordion">
           <li>
-            <div class="collapsible-header waves-effect"><i class="material-icons">work</i>Mon premier projet</div>
-            <div class="collapsible-body" style="displayé-block">
+            <div class="collapsible-header waves-effect">Création d'une webapp</div>
+            <div class="collapsible-body" style="display-block">
               <ul>
                 <li><a href="#!">Tâches</a></li>
                 <li><a href="#!">Finances</a></li>
@@ -49,10 +53,10 @@
             </div>
           </li>
           <li>
-            <div class="collapsible-header waves-effect"><i class="material-icons">work</i>Mon deuxième projet</div>
-            <div class="collapsible-body" style="displayé-block">
+            <div class="collapsible-header waves-effect">Mise en place d'IPV6</div>
+            <div class="collapsible-body" style="display-block">
               <ul>
-                <li><a href="#!"><i class="material-icons">trending_up</i>Tâches</a></li>
+                <li><a href="#!">Tâches</a></li>
                 <li><a href="#!">Finances</a></li>
                 <li><a href="#!">Ressources</a></li>
               </ul>
@@ -64,12 +68,11 @@
       <div ng-view></div>
     </main>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
-    <script src="view1/view1.js"></script>
-    <script src="view2/view2.js"></script>
+    <script src="projects/projects.js"></script>
+    <script src="todo/todo.js"></script>
     <script src="login/login.js"></script>
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>

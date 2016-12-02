@@ -18,7 +18,7 @@ angular.module('myApp.login',  ['ngRoute'])
      var email    = $scope.user.email;
      var password = $scope.user.password;
      firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
-          $location.path("#!/view1");
+          $location.path("#/projects");
       }, function(error){
           // On affiche les erreurs si la connexion a échouée
           $scope.regError = true;

@@ -18,3 +18,7 @@
 .container-top-bar {
   width: 100%;
 }
+
+.progress {
+  height: 15px;
+}

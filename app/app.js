@@ -3,11 +3,16 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
+  'myApp.projects',
+  'myApp.todo',
   'myApp.version',
   'myApp.login'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+]).run([
+  '$rootScope',
+  function ($rootScope) {
+      $rootScope.$on('$routeChangeStart', function (event, next) {
+          $rootScope.currentRoute = next;
+      });
+  }]).config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+  $routeProvider.otherwise({redirectTo: '/projects'});
 }]);
