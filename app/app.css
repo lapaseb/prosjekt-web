@@ -32,6 +32,10 @@ nav a .active {
   border-bottom: 1px solid white;
 }
 
+.side-nav {
+  width: 330px;
+}
+
 body {
   font-family: 'Roboto', sans-serif !important;
   background-color: #fafafa;
@@ -48,11 +52,11 @@ header {
 }
 
 header h2 {
-  padding-left: 30px;
+  padding-left: 60px;
 }
 
 main, footer {
-  padding-left: 330px;
+  padding-left: 360px;
 }
 
 .top-nav {
@@ -69,4 +73,16 @@ main, footer {
  header, main, footer {
    padding-left: 0;
  }
+}
+
+.container {
+  margin-top: 7vh !important;
+}
+
+.collapsible li {
+  padding-left: 16px !important;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
 }

@@ -12,7 +12,6 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="login.css">
 
   </head>
   <header class="ng-hide" ng-hide="hideit">
@@ -52,7 +51,7 @@
             <li ng-repeat="article in articles">
               <div class="collapsible-header waves-effect">{{article.projetNom}}</div>
               <div class="collapsible-body" style="display-block">
-                <ul>
+                <ul class="project-list">
                   <li><a  ng-click="singleProject(article.$id)">Tâches</a></li>
                   <li><a href="#!">Finances</a></li>
                   <li><a href="#!">Ressources</a></li>

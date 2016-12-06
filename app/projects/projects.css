@@ -32,4 +32,5 @@
   position: absolute;
   bottom: 30px;
   box-shadow: initial !important;
+  width: calc(100% - 40px);
 }

@@ -12,10 +12,11 @@ angular.module('myApp.addProject',  ['ngRoute'])
 
 .controller('AddProjectCtrl', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
   $rootScope.hideit = false;
-  $('.datepicker').pickadate({
-     selectMonths: true, // Creates a dropdown to control month
-     selectYears: 15 // Creates a dropdown of 15 years to control year
+    $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
   });
+
 
   $scope.addProject = function(e){
      e.preventDefault();

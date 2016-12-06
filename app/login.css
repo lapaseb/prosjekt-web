@@ -4,11 +4,12 @@
 
 .container {
   margin-top: 7vh !important;
+  width: 22% !important;
 }
 
 
 .logoContainer img {
-  width: 5%;
+  width: 3%;
 }
 
 .logoContainer h2 {
