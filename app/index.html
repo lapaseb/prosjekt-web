@@ -26,12 +26,7 @@
   <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $(".button-collapse").sideNav();
-        $('select').material_select();
-      });
-    </script>
+
     <script src="script.js"></script>
 
     <ul id="slide-out" class="side-nav fixed ng-hide" ng-hide="hideit">
@@ -48,15 +43,8 @@
         <li><div class="divider"></div></li>
         <li><a class="subheader"><i class="material-icons">work</i>Vos projets</a></li>
         <ul class="collapsible" data-collapsible="accordion">
-            <li ng-repeat="article in articles">
-              <div class="collapsible-header waves-effect">{{article.projetNom}}</div>
-              <div class="collapsible-body" style="display-block">
-                <ul class="project-list">
-                  <li><a  ng-click="singleProject(article.$id)">Tâches</a></li>
-                  <li><a href="#!">Finances</a></li>
-                  <li><a href="#!">Ressources</a></li>
-                </ul>
-              </div>
+            <li ng-repeat="project in projects">
+              <div class="collapsible-header waves-effect white-text"><a href="#/todo?projectID={{project.$id}}" class="quick-project-menu">{{project.projetNom}}</a></div>
             </li>
         </ul>
     </ul>

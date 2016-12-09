@@ -10,7 +10,15 @@ angular.module('myApp.todo', ['ngRoute'])
   });
 }])
 
-.controller('TodoCtrl', [ '$rootScope', '$scope', '$location', '$firebaseArray', '$firebase', function($rootScope, $scope, $location, $firebaseArray, $firebase) {
+.controller('TodoCtrl', [ '$rootScope', '$scope', '$location', '$firebaseArray', '$firebase', '$firebaseObject', '$http', '$routeParams', function($rootScope, $scope, $location, $firebaseArray, $firebase, $firebaseObject, $http, $routeParams) {
   $rootScope.hideit = false;
+
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    var ref = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID);
+    $scope.singleProject = $firebaseObject(ref);
+  });
+
+
 
 }]);

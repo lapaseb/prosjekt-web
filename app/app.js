@@ -11,15 +11,19 @@ angular.module('myApp', [
   'myApp.addProject',
   'firebase'
 ]).run([
-  '$rootScope', '$location',
-  function ($rootScope, $location) {
+  '$rootScope', '$location', '$firebase', '$firebaseArray',
+  function ($rootScope, $location, $firebase, $firebaseArray) {
       $rootScope.$on('$routeChangeStart', function (event, next) {
           $rootScope.currentRoute = next;
       });
 
       firebase.auth().onAuthStateChanged(function(user) {
         $rootScope.userEmail = user.email;
+        var ref = firebase.database().ref().child(user.uid + "/projets");
+        $rootScope.projects = $firebaseArray(ref);
+        console.log($rootScope.projects);
       });
+
 
       $rootScope.SignOut = function(e) {
         firebase.auth().signOut().then(function() {

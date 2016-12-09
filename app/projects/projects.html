@@ -12,7 +12,7 @@
     <div class="row">
       <div class="list-group" ng-repeat="article in articles">
           <div class="col s12 m6 l4">
-            <a href="#/todo" class="card-link" ng-click="singleProject(article.$id)">
+            <a href="#/todo?projectID={{article.$id}}" class="card-link" >
               <div class="card hoverable">
                 <div class="card-content">
                   <span class="card-title activator grey-text text-darken-4">{{article.projetNom}}</span>
@@ -20,13 +20,15 @@
                   <br>
                   <span class="card-sub-title grey-text text-darken-4">Progression</span>
                   <div class="progress">
-                    <div class="determinate" style="width:0%"></div>
+                    <div class="determinate" style="width:{{article.progression}}%"></div>
                   </div>
                   <b>Dépenses</b>
                   <p>Aucune dépense.</p>
                   <br>
                   <b>Gains</b>
                   <p>Aucun gain.</p>
+                  <br>
+                  <p>Importance <b>{{article.importance}}</b></p>
                   <div class="row">
                       <div class="col s12 l12 m12">
                         <a class="waves-effect waves-light btn delete-button red darken-2" ng-click="deleteProject(article.$id)"><i class="material-icons left">not_interested</i>Supprimer</a>
