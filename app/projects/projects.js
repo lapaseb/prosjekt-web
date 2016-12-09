@@ -13,6 +13,7 @@ angular.module('myApp.projects', ['ngRoute'])
 .controller('ProjectsCtrl', [ '$rootScope', '$scope', '$location', '$firebaseArray', '$firebase', '$firebaseObject', function($rootScope, $scope, $location, $firebaseArray, $firebase, $firebaseObject) {
   $rootScope.hideit = false;
 
+
   firebase.auth().onAuthStateChanged(function(user) {
     if (!user) {
       $location.path("#/login");
@@ -26,7 +27,6 @@ angular.module('myApp.projects', ['ngRoute'])
         // On créé la référence à la base de donnée en ajoutant l'id
         var ref = firebase.database().ref().child(user.uid + "/projets/" + id);
         ref.remove();
-
       }
     }
   });

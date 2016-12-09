@@ -53,4 +53,23 @@ angular.module('myApp.login',  ['ngRoute'])
     });
   }
 
+  $scope.resetPassword = function(){
+    var email    = $scope.user.email;
+    var auth = firebase.auth();
+
+    if (email == null){
+      Materialize.toast("indiquez votre adresse email dans le champ prévu à cet effet.", 4000);
+    } else {
+      auth.sendPasswordResetEmail(email).then(function() {
+        Materialize.toast("Un email de réinitialiser vous a été envoyé à l\'adresse " + email, 4000);
+      }, function(error) {
+        Materialize.toast("Une erreur s'est produite.", 4000);
+      });
+    }
+
+
+
+
+  }
+
 }]);

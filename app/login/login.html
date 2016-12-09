@@ -73,7 +73,7 @@
                 <label for='password'>Mot de passe</label>
               </div>
               <label style='float: right;'>
-								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+								<a class='pink-text' ng-click="resetPassword()"><b>Forgot Password?</b></a>
 							</label>
             </div>
 
@@ -83,7 +83,7 @@
                 <button type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button' ng-click="SignIn($event)">Se connecter</button>
               </div>
               <div class="row">
-                <img src="img/sign-in-with-google.png" ng-click="signInGoogle()" style="width: 60%;"/>
+                <button type="button" name='btn_login' class='col s12 btn btn-large waves-effect login-button  pink accent-3' ng-click="signInGoogle()">Se connecter avec Google</button>
               </div>
               <a href="#/signup">Créer un compte</a>
               <p>

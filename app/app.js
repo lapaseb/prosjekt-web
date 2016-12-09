@@ -15,6 +15,9 @@ angular.module('myApp', [
 ]).run([
   '$rootScope', '$location', '$firebase', '$firebaseArray',
   function ($rootScope, $location, $firebase, $firebaseArray) {
+
+
+
       $rootScope.$on('$routeChangeStart', function (event, next) {
           $rootScope.currentRoute = next;
       });
@@ -35,7 +38,6 @@ angular.module('myApp', [
             $location.path("/login");
           });
         }, function(error) {
-          alert(error);
         });
       }
 
