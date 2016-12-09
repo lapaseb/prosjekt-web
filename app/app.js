@@ -9,6 +9,8 @@ angular.module('myApp', [
   'myApp.login',
   'myApp.signup',
   'myApp.addProject',
+  'myApp.addTodo',
+  'myApp.addSubTodo',
   'firebase'
 ]).run([
   '$rootScope', '$location', '$firebase', '$firebaseArray',
@@ -16,6 +18,8 @@ angular.module('myApp', [
       $rootScope.$on('$routeChangeStart', function (event, next) {
           $rootScope.currentRoute = next;
       });
+
+      $rootScope.currentProject = null;
 
       firebase.auth().onAuthStateChanged(function(user) {
         $rootScope.userEmail = user.email;

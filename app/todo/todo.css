@@ -1,0 +1,21 @@
+main {
+  padding-left: 8.4%;
+}
+
+.maincard {
+  min-height: 70vh;
+}
+
+.insidecard {
+  box-shadow: initial;
+  background-color: #50c878;
+  color: white;
+}
+.subtodo-title {
+  font-size: 1.3em !important;
+  line-height: 15px !important;
+}
+
+.add-todo {
+  background-color:  #50c878;
+}

@@ -90,11 +90,3 @@ main, footer {
 .quick-project-menu {
   padding: 0px !important;
 }
-
-.active {
-  background-color: #50c878 !important;
-}
-
-.active a {
-  color: white !important;
-}
