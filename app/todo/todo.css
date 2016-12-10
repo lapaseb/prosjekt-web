@@ -1,5 +1,5 @@
 main {
-  
+
 }
 
 .maincard {
@@ -12,7 +12,8 @@ main {
   color: white;
 }
 .subtodo-title {
-  font-size: 1.1em !important;
+  font-size: 15px !important;
+  font-weight: normal !important;
   line-height: 15px !important;
 }
 
@@ -22,4 +23,8 @@ main {
 
 .addsubtodo {
   width: 100%;
+}
+
+.card-content {
+  padding: 11px !important;
 }
