@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="userprofile/userprofile.css">
+  </head>
+  <body>
+    <div class="section"></div>
+    <main>
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Informations du compte</span>
+              <p>
+              <b>Informations personelles</b>
+              <p>{{userEmail}}</p>
+              <p>{{userName}}</p>
+              <p>{{userID}}</p>
+              <br>
+              <a class="waves-effect waves-light btn delete-button red darken-1" ng-click="deleteAccount()"><i class="material-icons left">not_interested</i>Supprimer mon compte</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+</html>
