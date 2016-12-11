@@ -35,6 +35,7 @@ angular.module('myApp.todo', ['ngRoute'])
     var refTodo = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID + "/tachesPrincipales/");
     $scope.MainTodos = $firebaseArray(refTodo);
 
+
   });
 
 }]);

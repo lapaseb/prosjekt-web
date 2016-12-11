@@ -14,33 +14,40 @@
       <div class="row">
         <div class="list-group todos" ng-repeat="MainTodo in MainTodos">
           <div class="col s12 m6 l3 ">
-            <div class="card hoverable maincard">
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><b>{{MainTodo.nomTachePrincipale}}</b></span>
-                <p>
-                  {{MainTodo.descriptionTachePrincipale}}
-                </p>
-                <br>
-                <div class="list-group" ng-repeat="SubTodo in MainTodo.tachesSecondaire">
-                  <div class="col s12 m12 l12">
-                    <div class="card insidecard ">
-                      <div class="card-content">
-                        <span class="card-title activator subtodo-title">{{SubTodo.nomTacheSecondaire}}</span>
+            <a href="#/singletodo?todoID={{MainTodo.$id}}" class="linkToSingleTodo">
+              <div class="card hoverable maincard">
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"><b>{{MainTodo.nomTachePrincipale}}</b></span>
+                  <p>
+                    {{MainTodo.descriptionTachePrincipale}}
+                  </p>
+                  <p>
+                    <div class="progress">
+                      <div class="determinate" style="width: 15%"></div>
+                    </div>
+                  </p>
+                  <br>
+                  <div class="list-group" ng-repeat="SubTodo in MainTodo.tachesSecondaire">
+                    <div class="col s12 m12 l12">
+                      <div class="card insidecard ">
+                        <div class="card-content">
+                          <span class="card-title activator subtodo-title">{{SubTodo.nomTacheSecondaire}}</span>
 
-                        <br>
+                          <br>
+                        </div>
                       </div>
                     </div>
-                  </div>
-              </div>
-              <div class="row">
-                <center>
-                  <div class="col s12 l12 m12">
-                    <a class="waves-effect waves-light btn pink accent-3 addsubtodo" ng-click="addSubTodo(MainTodo.$id)"><i class="material-icons left">add</i>Ajouter une tâche interne</a>
-                  </div>
-                </center>
+                </div>
+                <div class="row">
+                  <center>
+                    <div class="col s12 l12 m12">
+                      <a class="waves-effect waves-light btn pink accent-3 addsubtodo" ng-click="addSubTodo(MainTodo.$id)">Ajouter une tâche interne</a>
+                    </div>
+                  </center>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         </div>
       </div>

@@ -13,6 +13,7 @@ angular.module('myApp', [
   'myApp.addSubTodo',
   'myApp.reset',
   'myApp.userprofile',
+  'myApp.singletodo',
   'firebase'
 ]).run([
   '$rootScope', '$location', '$firebase', '$firebaseArray',

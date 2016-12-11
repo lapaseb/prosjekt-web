@@ -1,6 +1,3 @@
-main {
-
-}
 
 .maincard {
   min-height: 70vh;
@@ -11,6 +8,7 @@ main {
   background-color: #50c878;
   color: white;
 }
+
 .subtodo-title {
   font-size: 15px !important;
   font-weight: normal !important;
@@ -31,6 +29,16 @@ main {
   padding: 11px !important;
 }
 
-.linkToSingleTodo {
-  color: black;
+.progress {
+  height: 20px;
+  background-color: #ccc;
+}
+
+.determinate {
+  background-color: #f50057 !important;
+}
+
+.dividerCard {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

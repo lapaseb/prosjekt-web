@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="singletodo/singletodo.css">
+  </head>
+  <body>
+    <div class="section"></div>
+    <main>
+        <div class="row">
+          <div class="col s12 m6 offset-l3">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">{{singleTodo.nomTachePrincipale}}</span>
+                <p>{{singleTodo.descriptionTachePrincipale}}</p>
+                <div class="divider dividerCard"></div>
+                <b>Progression</b>
+                <div class="progress">
+                  <div class="determinate" style="width: 35%"></div>
+                </div>
+                <div class="divider dividerCard"></div>
+                <div class="row center-align">
+                  <a class="waves-effect waves-light btn delete-button red darken-3" ng-click="deleteTodo()"><i class="material-icons left">not_interested</i>Supprimer</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+</html>
