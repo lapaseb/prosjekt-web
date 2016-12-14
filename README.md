@@ -1,4 +1,4 @@
-# `prosjekt-web` — A projects manager made with Angular & Firebase
+#`Prosjekt` — A projects manager made with Angular & Firebase
 
 ## Getting Started
 
