@@ -28,7 +28,6 @@
 }
 
 .card {
-  min-height: 500px !important;
   position: relative;
 }
 
@@ -37,4 +36,13 @@
   bottom: 30px;
   box-shadow: initial !important;
   width: calc(100% - 40px);
+}
+
+.progress {
+  height: 20px;
+  background-color: #ccc;
+}
+
+.determinate {
+  background-color: #f50057 !important;
 }

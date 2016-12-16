@@ -31,13 +31,24 @@
                     </p>
                   </p>
                   <br>
-                  <div class="list-group" ng-repeat="SubTodo in MainTodo.tachesSecondaire">
+                  <div class="list-group" ng-repeat="(key, SubTodo) in MainTodo.tachesSecondaire">
                     <div class="col s12 m12 l12">
                       <div class="card insidecard ">
                         <div class="card-content">
-                          <a href="#/singletodo?todoID={{SubTodo.$id}}" class="linkToSingleSubTodo">
+                          <a href="#/singletodo?todoID={{key}}" class="linkToSingleSubTodo">
                             <span class="card-title activator subtodo-title">{{SubTodo.nomTacheSecondaire}}</span>
                           </a>
+                            <p>
+                              <div class="switch">
+                                <label>
+                                  En cours
+                                  <input type="checkbox" ng-checked="{{SubTodo.isOver}}">
+                                  <span class="lever"  ng-click="setTodoState(MainTodo.$id, key)"></span>
+                                  Terminée
+                                </label>
+                              </div>
+
+                            </p>
                           <br>
                         </div>
                       </div>

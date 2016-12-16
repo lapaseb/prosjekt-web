@@ -18,7 +18,7 @@ main {
 }
 
 .add-todo {
-  background-color:  #50c878;
+  background-color: #f50057
 }
 
 .addsubtodo {
@@ -37,4 +37,17 @@ main {
 
 .linkToSingleSubTodo {
   color: white;
+}
+
+.progress {
+  height: 20px;
+  background-color: #ccc;
+}
+
+.determinate {
+  background-color: #f50057 !important;
+}
+
+label {
+  color: white !important;
 }

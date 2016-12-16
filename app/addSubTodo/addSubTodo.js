@@ -36,7 +36,8 @@ angular.module('myApp.addSubTodo',  ['ngRoute'])
                 nomTacheSecondaire: nomTodo,
                 progression: progression,
                 dateDebut: dateDeDebut,
-                dateFinPrevue: dateDeFinPrevue
+                dateFinPrevue: dateDeFinPrevue,
+                isOver: false
               }).then(function(ref) {
                   window.location.href = "#/todo?projectID=" + $routeParams.projectID;
               }, function(error) {

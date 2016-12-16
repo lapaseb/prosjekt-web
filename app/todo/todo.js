@@ -27,14 +27,32 @@ angular.module('myApp.todo', ['ngRoute'])
 
 
   firebase.auth().onAuthStateChanged(function(user) {
+
+
+    $scope.setTodoState = function(todoID, subTodoID){
+
+      var ref = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID + "/tachesPrincipales/" +  todoID + "/tachesSecondaire/" + subTodoID + "/isOver/");
+      var isOver = $firebaseObject(ref);
+
+
+      var onValueChange = ref.once('value', function(dataSnapshot) {
+
+        if (dataSnapshot.val() == false){
+          ref.set(true);
+        }else {
+          ref.set(false);
+        }
+
+      });
+
+    }
+
     var ref = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID);
     $rootScope.currentProject = $routeParams.projectID;
-    console.log(ref);
     $scope.singleProject = $firebaseObject(ref);
 
     var refTodo = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID + "/tachesPrincipales/");
     $scope.MainTodos = $firebaseArray(refTodo);
-
 
   });
 
