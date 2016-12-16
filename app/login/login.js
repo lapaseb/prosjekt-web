@@ -20,7 +20,6 @@ angular.module('myApp.login',  ['ngRoute'])
     }
   });
 
-
   $scope.SignIn = function(e){
      e.preventDefault();
      // On stock les valeurs fournies dans le formulaire de connexion
@@ -29,6 +28,7 @@ angular.module('myApp.login',  ['ngRoute'])
 
      firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
        $rootScope.$apply(function() {
+         // On redirige l'utilisateur sur la page de ses projets
          $location.path("/projects");
        });
       }, function(error){
@@ -53,6 +53,6 @@ angular.module('myApp.login',  ['ngRoute'])
     });
   }
 
-  
+
 
 }]);

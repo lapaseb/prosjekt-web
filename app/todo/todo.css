@@ -34,3 +34,7 @@ main {
 .linkToSingleTodo {
   color: black;
 }
+
+.linkToSingleSubTodo {
+  color: white;
+}

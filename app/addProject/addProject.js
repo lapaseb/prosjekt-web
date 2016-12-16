@@ -12,11 +12,6 @@ angular.module('myApp.addProject',  ['ngRoute'])
 
 .controller('AddProjectCtrl', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
   $rootScope.hideit = false;
-  $('.datepicker').pickadate({
-     selectMonths: true, // Creates a dropdown to control month
-     selectYears: 15 // Creates a dropdown of 15 years to control year
-  });
-
   $scope.addProject = function(e){
      e.preventDefault();
      firebase.auth().onAuthStateChanged(function(user) {
@@ -30,6 +25,11 @@ angular.module('myApp.addProject',  ['ngRoute'])
            var importance        = $scope.project.importance;
            var progression       = $scope.project.progression;
 
+           var dateDeDebut = new moment(dateDebut).format('Do MMMM YYYY');
+           var dateDeFinPrevue = new moment(dateFin).format('Do MMMM YYYY');
+
+
+
            if (importance == 3){
              importance = "élevée";
            } else if (importance == 2){
@@ -38,15 +38,11 @@ angular.module('myApp.addProject',  ['ngRoute'])
              importance = "faible";
            }
 
-           console.log(dateDebut + " "  + dateFin + "  " + importance);
-
-
            firebase.database().ref(projetAuthor + '/projets').push({
-              projetDescription: descriptionProjet,
-              projetNom: nomProjet,
-              /*
-              dateDebut : dateDebut,
-              dateFinPrevue : dateFin,*/
+              projetDescription : descriptionProjet,
+              projetNom : nomProjet,
+              dateDebut : dateDeDebut,
+              dateFinPrevue : dateDeFinPrevue,
               importance : importance,
               progression : progression
             }).then(function(ref) {

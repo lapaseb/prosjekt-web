@@ -37,9 +37,6 @@ angular.module('myApp.addSubTodo',  ['ngRoute'])
                   alert(error);
               });
            }
-
-
-
         } else {
           alert('erreur');
         }
