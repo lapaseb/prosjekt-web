@@ -23,8 +23,12 @@
                   </p>
                   <p>
                     <div class="progress">
-                      <div class="determinate" style="width: 15%"></div>
+                      <div class="determinate" style="width:{{MainTodo.progression}}%"></div>
                     </div>
+                    <span>Date de début : {{MainTodo.dateDebut}}</span>
+                    <p>
+                      <span>Date de fin   : {{MainTodo.dateFinPrevue}}</span>
+                    </p>
                   </p>
                   <br>
                   <div class="list-group" ng-repeat="SubTodo in MainTodo.tachesSecondaire">
