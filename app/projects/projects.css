@@ -29,6 +29,7 @@
 
 .card {
   position: relative;
+  min-height: 500px;
 }
 
 .delete-button {

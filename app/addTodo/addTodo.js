@@ -23,7 +23,7 @@ angular.module('myApp.addTodo',  ['ngRoute'])
            var todoAuthor        = user.uid;
            var dateDebut         = $scope.project.dateDebut;
            var dateFin           = $scope.project.dateFin;
-           var progression       = $scope.project.progression;
+           var progression       = 0;
 
            var dateDeDebut = new moment(dateDebut).format('Do MMMM YYYY');
            var dateDeFinPrevue = new moment(dateFin).format('Do MMMM YYYY');
