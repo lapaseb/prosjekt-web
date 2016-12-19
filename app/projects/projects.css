@@ -39,6 +39,11 @@
   width: calc(100% - 40px);
 }
 
+.preloader-wrapper {
+  margin-top: 35vh;
+}
+
+
 .progress {
   height: 20px;
   background-color: #ccc;

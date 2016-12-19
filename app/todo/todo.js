@@ -58,8 +58,6 @@ angular.module('myApp.todo', ['ngRoute'])
         var onValueChange = ref.once('value', function(dataSnapshot) {
 
           refProgressionToShow.$loaded().then(function(){
-
-
             if (dataSnapshot.val() == false){
               nbreTodoOver++;
               ref.set(true);
