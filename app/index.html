@@ -42,11 +42,17 @@
         <li><a href="#">Paramètres de compte</a></li>
         <li><div class="divider"></div></li>
         <li><a class="subheader"><i class="material-icons">work</i>Vos projets</a></li>
+        <div class="row center-align">
+        <div class="sidenav-loader">
+           <span>Chargement de vos projets en cours...</span>
+         </div>
+       </div>
         <ul class="collapsible" data-collapsible="accordion">
             <li ng-repeat="project in projects">
               <div class="collapsible-header waves-effect white-text"><a href="#/todo?projectID={{project.$id}}" class="quick-project-menu">{{project.projetNom}}</a></div>
             </li>
         </ul>
+
     </ul>
     <main>
       <div ng-view></div>
@@ -88,4 +94,5 @@
       firebase.initializeApp(config);
     </script>
   </body>
+
 </html>

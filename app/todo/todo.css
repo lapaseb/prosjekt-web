@@ -18,13 +18,19 @@ main {
 }
 
 .add-todo {
-  background-color: #f50057
+  background-color: #c85064;
 }
+
 
 .addsubtodo {
   width: 100%;
   box-shadow: initial;
   font-size: 13px;
+  background-color: #c85064;
+}
+
+.addsubtodo:hover, .add-todo:hover {
+  background-color: #c85064!important;
 }
 
 .card-content {

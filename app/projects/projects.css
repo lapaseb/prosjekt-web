@@ -7,7 +7,11 @@
 }
 
 .add-project {
-  background-color:  #f50057;
+  background-color: #c85064;
+}
+
+.add-project:hover {
+  background-color: #c85064;
 }
 
 .card-link {
