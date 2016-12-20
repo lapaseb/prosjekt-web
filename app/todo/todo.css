@@ -45,14 +45,22 @@ main {
   color: white;
 }
 
-.progress {
-  height: 20px;
-  background-color: #ccc;
+.determinate {
+  background-color: #50c878 !important;
 }
 
-.determinate {
-  background-color: #f50057 !important;
+.progress {
+  height: 20px;
 }
+
+.progress .redBar {
+  background-color: #c94f64 !important;
+}
+
+.progress .orangeBar {
+  background-color: #e65100  !important;
+}
+
 
 label {
   color: white !important;

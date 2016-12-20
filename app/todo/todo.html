@@ -22,7 +22,7 @@
                   </p>
                   <p>
                     <div class="progress">
-                      <div class="determinate" style="width:{{MainTodo.progression}}%"></div>
+                      <div class="determinate" ng-class="MainTodo.progression <= 30 ? 'redBar' : MainTodo.progression < 60 ? 'orangeBar' : ''" style="width:{{MainTodo.progression}}%"></div>
                     </div>
                     <p><b>{{MainTodo.progression | number:0}}%</b></p>
                     <span>Date de début : {{MainTodo.dateDebut}}</span>
