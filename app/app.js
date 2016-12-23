@@ -18,7 +18,6 @@ angular.module('myApp', [
 ]).run([
   '$rootScope', '$location', '$firebase', '$firebaseArray',
   function ($rootScope, $location, $firebase, $firebaseArray) {
-    
 
       $rootScope.$on('$routeChangeStart', function (event, next) {
           $rootScope.currentRoute = next;
@@ -28,16 +27,13 @@ angular.module('myApp', [
 
       firebase.auth().onAuthStateChanged(function(user) {
         $rootScope.userEmail = user.email;
-        var ref = firebase.database().ref().child(user.uid + "/projets");
-        $rootScope.projects = $firebaseArray(ref);
+        $rootScope.ref = firebase.database().ref().child(user.uid + "/projets");
+        $rootScope.projects = $firebaseArray($rootScope.ref);
 
         $rootScope.projects.$loaded().then(function(){
           $('.sidenav-loader').hide();
         })
-
-
       });
-
 
       $rootScope.SignOut = function(e) {
         firebase.auth().signOut().then(function() {

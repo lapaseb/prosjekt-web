@@ -28,6 +28,7 @@ angular.module('myApp.todo', ['ngRoute'])
 
   firebase.auth().onAuthStateChanged(function(user) {
 
+    $scope.projectIDnum = $routeParams.projectID;
 
 
     $scope.setTodoState = function(todoID, subTodoID){
@@ -35,6 +36,7 @@ angular.module('myApp.todo', ['ngRoute'])
       var SubTodos = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID + "/tachesPrincipales/" +  todoID + "/tachesSecondaire/");
       var SubTodosArray = $firebaseArray(SubTodos);
       var nbreTodoOver = 0;
+
 
       SubTodosArray.$loaded().then(function(){
 

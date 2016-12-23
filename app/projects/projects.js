@@ -19,10 +19,9 @@ angular.module('myApp.projects', ['ngRoute'])
       Materialize.toast('Vous devez être connecté pour accéder à cette page.', 4000);
     } else {
       $rootScope.userEmail = user.email;
-      var ref = firebase.database().ref().child(user.uid + "/projets");
-      $rootScope.articles = $firebaseArray(ref);
+      $scope.articles = $rootScope.projects;
 
-      $rootScope.articles.$loaded().then(function(){
+      $scope.articles.$loaded().then(function(){
         $('.preloader-wrapper').hide();
       })
 

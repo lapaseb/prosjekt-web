@@ -33,7 +33,10 @@
 
 .card {
   position: relative;
+  max-height: 500px;
   min-height: 500px;
+  overflow: hidden;
+  overflow-y: visible;
 }
 
 .delete-button {
