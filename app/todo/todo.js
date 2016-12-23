@@ -17,20 +17,14 @@ angular.module('myApp.todo', ['ngRoute'])
     $location.path("/addTodo");
   }
 
-
-
   $scope.addSubTodo = function(currentID){
     $rootScope.TodoID = currentID;
     $location.path("/addSubTodo");
   }
 
-
-
   firebase.auth().onAuthStateChanged(function(user) {
 
     $scope.projectIDnum = $routeParams.projectID;
-
-
     $scope.setTodoState = function(todoID, subTodoID){
 
       var SubTodos = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID + "/tachesPrincipales/" +  todoID + "/tachesSecondaire/");
@@ -49,16 +43,13 @@ angular.module('myApp.todo', ['ngRoute'])
         var refProgression = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID + "/tachesPrincipales/" +  todoID + "/progression/");
         var refProgressionToShow = $firebaseObject(refProgression);
 
-
-
         var onValueChange = refProgression.once('value', function(dataSnapshot) {
+
         });
 
         var ref = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID + "/tachesPrincipales/" +  todoID + "/tachesSecondaire/" + subTodoID + "/isOver/");
         var isOver = $firebaseObject(ref);
-
         var onValueChange = ref.once('value', function(dataSnapshot) {
-
           refProgressionToShow.$loaded().then(function(){
             if (dataSnapshot.val() == false){
               nbreTodoOver++;
@@ -69,15 +60,9 @@ angular.module('myApp.todo', ['ngRoute'])
               ref.set(false);
               refProgression.set(refProgressionToShow.$value - (100/SubTodosArray.length));
             }
-
           })
         });
-
       })
-
-
-
-
     }
 
     var ref = firebase.database().ref().child(user.uid + "/projets/" + $routeParams.projectID);

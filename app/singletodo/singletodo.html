@@ -16,7 +16,7 @@
                 <div class="progress">
                   <div class="determinate" style="width: {{singleTodo.progression}}%"></div>
                 </div>
-                <p>{{singleTodo.progression}}%</p>
+                <p>{{singleTodo.progression | number:0}}%</p>
                 <div class="divider dividerCard"></div>
                 <div class="row center-align">
                   <a class="waves-effect waves-light btn delete-button red darken-3" ng-click="deleteTodo()"><i class="material-icons left">not_interested</i>Supprimer</a>

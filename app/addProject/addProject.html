@@ -22,22 +22,6 @@
     h5 {
       font-weight: bold;
     }
-
-    .input-field input[type=date]:focus + label,
-    .input-field input[type=text]:focus + label,
-    .input-field input[type=email]:focus + label,
-    .input-field input[type=password]:focus + label,
-    .input-field textarea:focus + label {
-      color: #e91e63;
-    }
-
-    .input-field input[type=date]:focus,
-    .input-field input[type=text]:focus,
-    .input-field input[type=email]:focus,
-    .input-field input[type=password]:focus {
-      border-bottom: 2px solid #e91e63;
-      box-shadow: none;
-    }
   </style>
   <body>
     <div class="section"></div>
@@ -73,16 +57,6 @@
                 </div>
                 <div class='input-field col s12 m6 l6'>
                   <input type="date" id="datefin" ng-model="project.dateFin">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="input-field col s12">
-                  <label for="test5" >Progression initiale</label>
-                  <br>
-                  <p class="range-field">
-                    <input type="range" id="test5" min="0" max="100" ng-model="project.progression"/>
-                  </p>
                 </div>
               </div>
 

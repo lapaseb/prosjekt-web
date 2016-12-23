@@ -28,7 +28,9 @@ angular.module('myApp.projects', ['ngRoute'])
       $rootScope.deleteProject = function(id){
         // On créé la référence à la base de donnée en ajoutant l'id
         var ref = firebase.database().ref().child(user.uid + "/projets/" + id);
-        ref.remove();
+        if (confirm("Etes-vous sûr de vouloir supprime ce projet ?")){
+          ref.remove();
+        }
       }
     }
   });

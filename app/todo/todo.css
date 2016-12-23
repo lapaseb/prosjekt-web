@@ -61,6 +61,15 @@ main {
   background-color: #ccc;
 }
 
+.card-title {
+  line-height: 20px !important;
+}
+
+.card-content {
+  margin-top: 15px;
+}
+
+
 .progress .redBar {
   background-color: #E53935  !important;
 }

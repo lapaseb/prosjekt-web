@@ -20,7 +20,7 @@ angular.module('myApp.singletodo', ['ngRoute'])
 
     $scope.deleteTodo = function(){
       refTodo.remove();
-      $location.path("#/todo?projectID=" + $rootScope.currentProject);
+      $location.path("#/todo?projectID=" + $routeParams.projectID);
     }
 
   });
